@@ -1,0 +1,32 @@
+name: bleou_matrices_application_2_3_7
+description: "Application de calculs matriciels"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  provider: ^6.0.5
+  shared_preferences: ^2.1.1
+
+dependency_overrides:
+  # Pin the Android implementation to avoid a Kotlin Gradle script incompatibility
+  # observed with some newer `shared_preferences_android` releases.
+  # Use an older Android implementation compatible with Kotlin 1.8.x
+  shared_preferences_android: 2.0.17
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  uses-material-design: true
